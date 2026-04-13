@@ -15,6 +15,8 @@ bench migrate
 bench build --app call_intelligence
 ```
 
+The last line compiles this app’s JS/CSS assets for the Desk. Run it after install or whenever you change `public/` files — it avoids missing or stale asset issues that sometimes show up if only `bench build` (all apps) was run or assets were skipped.
+
 ## Notes
 
 - UI (workspace, dashboards, custom fields, client scripts) is provided via **fixtures** in `call_intelligence/fixtures/`.
