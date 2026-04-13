@@ -15,16 +15,16 @@ app_version = app_version
 # Required apps (Lead/Issue live in ERPNext stack)
 required_apps = ["erpnext"]
 
-# Loaded on `bench migrate` — order: charts/cards → dashboard → workspace shell.
-# Re-export with: bench --site <site> export-fixtures --app call_intelligence
+# Used by `bench export-fixtures`. On `bench migrate`, Frappe imports every
+# `*.json` file under `call_intelligence/fixtures/` (keep only real DocType JSON there).
 fixtures = [
-    {"doctype": "Dashboard Chart", "filters": [["module", "=", "Call Intelligence"]]},
-    {"doctype": "Number Card", "filters": [["module", "=", "Call Intelligence"]]},
-    {"doctype": "Dashboard", "filters": [["module", "=", "Call Intelligence"]]},
-    {"doctype": "Workspace", "filters": [["name", "=", "Call Intelligence"]]},
-    {"doctype": "Workspace Sidebar", "filters": [["name", "=", "Call Intelligence"]]},
-    {"doctype": "Custom Field", "filters": [["module", "=", "Call Intelligence"]]},
-    {"doctype": "Client Script", "filters": [["module", "=", "Call Intelligence"]]},
+    "Workspace",
+    "Workspace Sidebar",
+    "Dashboard",
+    "Dashboard Chart",
+    "Number Card",
+    "Custom Field",
+    "Client Script",
 ]
 
 after_migrate = ["call_intelligence.setup.post_migrate.run"]
@@ -49,6 +49,3 @@ app_include_js = [
 
 # Patient 360 Dashboard: shared parsers/renderers (page CSS must live in page/*.css — Frappe ignores page_css hooks)
 page_js = {"patient-360-dashboard": "public/js/patient_chat.js"}
-
-# Future: SLA / lifecycle hooks on Issue
-# doc_events["Issue"] = {"on_update": "call_intelligence.hooks_issue.on_issue_update"}

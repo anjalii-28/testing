@@ -2,5 +2,6 @@ include MANIFEST.in
 include requirements.txt
 include license.txt
 recursive-include . *.py *.json *.js *.css *.md *.txt
+recursive-include call_intelligence/examples *.json
 global-exclude __pycache__
 global-exclude *.py[co]
