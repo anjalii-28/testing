@@ -15,11 +15,10 @@ app_version = app_version
 # Required apps (Lead/Issue live in ERPNext stack)
 required_apps = ["erpnext"]
 
-# Used by `bench export-fixtures`. On `bench migrate`, Frappe imports every
-# `*.json` file under `call_intelligence/fixtures/` (keep only real DocType JSON there).
+# Used by `bench export-fixtures`. On `bench migrate`, all `*.json` files under
+# `call_intelligence/fixtures/` are imported (keep only DocType JSON there).
 fixtures = [
     "Workspace",
-    "Workspace Sidebar",
     "Dashboard",
     "Dashboard Chart",
     "Number Card",

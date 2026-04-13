@@ -1,4 +1,3 @@
-# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -9,29 +8,20 @@ venv/
 dist/
 build/
 
-# Frappe / bench (never commit these)
 sites/
 logs/
 config/
 env/
-archived/
 *.sql
 *.sql.gz
 *.tar
 *.tar.gz
 
-# Environment / secrets
 .env
 .env.*
 !.env.example
 
-# IDE / OS
 .idea/
 .vscode/
 .DS_Store
-
-# Node
 node_modules/
-
-# Docker
-docker/.env

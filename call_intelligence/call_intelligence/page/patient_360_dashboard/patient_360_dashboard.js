@@ -20,6 +20,7 @@ frappe.pages["patient-360-dashboard"].on_page_load = function (wrapper) {
 		mode: "lead",
 		list: [],
 		selectedName: "",
+		deptFilter: "",
 		detail: null,
 		wa: [],
 		waOptimistic: [],
@@ -323,6 +324,92 @@ frappe.pages["patient-360-dashboard"].on_page_load = function (wrapper) {
 			: "call_intelligence.api.get_patient_360_leads";
 	}
 
+	function channelLabel(row) {
+		const s = String((row && row.channel) || "").trim();
+		if (s) return s;
+		const src = String((row && row.source) || "").trim().toLowerCase();
+		if (src.includes("whatsapp")) return "WhatsApp";
+		if (src.includes("web")) return "Website";
+		return "Call";
+	}
+
+	function getDeptFilterFromRoute() {
+		// Preferred: Workspace Sidebar "route_options" sets frappe.route_options
+		try {
+			const ro = frappe.route_options || {};
+			if (ro && ro.department) {
+				const v = String(ro.department || "").trim();
+				// Consume it so it doesn't affect subsequent navigation unexpectedly
+				frappe.route_options = null;
+				return v;
+			}
+		} catch (e) {
+			/* ignore */
+		}
+		const r = (frappe.get_route && frappe.get_route()) || [];
+		// Example: ["patient-360-dashboard", {"department":"Cardiology"}] OR ["patient-360-dashboard?department=Cardiology"]
+		const last = r && r.length ? r[r.length - 1] : null;
+		if (last && typeof last === "object" && last.department) {
+			return String(last.department || "").trim();
+		}
+		if (r && r.length && typeof r[0] === "string") {
+			const s = r[0];
+			if (s.includes("?") && s.toLowerCase().includes("department=")) {
+				try {
+					const qs = s.split("?")[1] || "";
+					const params = new URLSearchParams(qs);
+					return String(params.get("department") || "").trim();
+				} catch (e) {
+					return "";
+				}
+			}
+		}
+		// Also support query string (when opened as /app/patient-360-dashboard?department=Cardiology)
+		try {
+			const params = new URLSearchParams(window.location.search || "");
+			return String(params.get("department") || "").trim();
+		} catch (e) {
+			return "";
+		}
+	}
+
+	function normalizeDeptFilter(v) {
+		const s = String(v || "").trim();
+		if (!s) return "";
+		const key = s.toLowerCase();
+		if (key === "cardiology") return "Cardiology";
+		if (key === "orthopedics" || key === "orthopaedics") return "Orthopedics";
+		if (key === "general") return "General";
+		return "";
+	}
+
+	function applyDeptFilter(list) {
+		const f = normalizeDeptFilter(state.deptFilter);
+		if (!f) return list || [];
+		return (list || []).filter((row) => String((row && row.department) || "").trim() === f);
+	}
+
+	function syncDeptFilterFromRoute(alsoReloadDetail) {
+		const next = normalizeDeptFilter(getDeptFilterFromRoute());
+		if (next === state.deptFilter) return;
+		state.deptFilter = next;
+		if (state.mode !== "lead") {
+			return;
+		}
+		const filtered = applyDeptFilter(state.list);
+		const nextSelected = filtered.length ? String(filtered[0].name || "").trim() : "";
+		state.selectedName = nextSelected;
+		renderList();
+		if (alsoReloadDetail) {
+			if (nextSelected) {
+				loadDetail(nextSelected);
+			} else {
+				state.detail = null;
+				renderDetail();
+			}
+		}
+	}
+
 	function renderList() {
 		const $list = page.body.find(".p360dash-list");
 		if (state.loadingList) {
@@ -334,7 +421,16 @@ frappe.pages["patient-360-dashboard"].on_page_load = function (wrapper) {
 			return;
 		}
 
-		$list.html(pch.renderConversationList(state.list, state.selectedName, state.mode));
+		if (state.mode === "lead") {
+			const filtered = applyDeptFilter(state.list);
+			if (!filtered.length) {
+				$list.html(`<div class="pch-thread-empty">${esc(__("No records found."))}</div>`);
+				return;
+			}
+			$list.html(pch.renderConversationList(filtered, state.selectedName, state.mode));
+		} else {
+			$list.html(pch.renderConversationList(state.list, state.selectedName, state.mode));
+		}
 
 		$list.find(".pch-conv-item").on("click", function () {
 			const leadName = $(this).data("name");
@@ -906,6 +1002,7 @@ frappe.pages["patient-360-dashboard"].on_page_load = function (wrapper) {
 		state.loadingList = true;
 		state.detail = null;
 		state.selectedName = "";
+		state.deptFilter = normalizeDeptFilter(getDeptFilterFromRoute());
 		state.waOptimistic = [];
 		renderList();
 		renderDetail();
@@ -917,8 +1014,9 @@ frappe.pages["patient-360-dashboard"].on_page_load = function (wrapper) {
 				state.list = r.message || [];
 				state.loadingList = false;
 				renderList();
-				if (state.list.length) {
-					state.selectedName = state.list[0].name;
+				const filtered = state.mode === "lead" ? applyDeptFilter(state.list) : state.list;
+				if (filtered.length) {
+					state.selectedName = filtered[0].name;
 					renderList();
 					loadDetail(state.selectedName);
 				}
@@ -1016,6 +1114,18 @@ frappe.pages["patient-360-dashboard"].on_page_load = function (wrapper) {
 	bindEvents();
 	loadList();
 	scheduleLeadListPoll();
+
+	// When the user clicks a Department sidebar link while already on this page,
+	// Frappe updates route/route_options but does not recreate the page.
+	// Listen for router changes and re-apply the filter.
+	if (frappe.router && typeof frappe.router.on === "function") {
+		frappe.router.on("change", function () {
+			const r = (frappe.get_route && frappe.get_route()) || [];
+			if (r && r[0] === "patient-360-dashboard") {
+				syncDeptFilterFromRoute(true);
+			}
+		});
+	}
 
 	if (frappe.realtime && typeof frappe.realtime.on === "function") {
 		frappe.realtime.on("new_lead_created", function () {
