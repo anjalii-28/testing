@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Lead",
+  "enabled": 1,
+  "modified": "2026-03-24 02:13:23.601523",
+  "module": "Call Intelligence",
+  "name": "Call Intelligence Lead Create Ticket",
+  "script": "frappe.ui.form.on('Lead', {\n\trefresh(frm) {\n\t\tif (frm.is_new()) {\n\t\t\treturn;\n\t\t}\n\t\tfrm.add_custom_button(__('Create Ticket'), function () {\n\t\t\tfrappe.call({\n\t\t\t\tmethod: 'call_intelligence.api.create_issue',\n\t\t\t\targs: {\n\t\t\t\t\tlead_id: frm.doc.name,\n\t\t\t\t},\n\t\t\t\tfreeze: true,\n\t\t\t\tfreeze_message: __('Creating Issue...'),\n\t\t\t\tcallback(r) {\n\t\t\t\t\tif (!r.exc && r.message && r.message.name) {\n\t\t\t\t\t\tfrappe.set_route('Form', 'Issue', r.message.name);\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t});\n\t\t}, __('Actions'));\n\t},\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Issue",
+  "enabled": 1,
+  "modified": "2026-03-27 02:46:42.969341",
+  "module": "Call Intelligence",
+  "name": "Call Intelligence Issue Lead Navigation",
+  "script": "frappe.ui.form.on('Issue', {\n\trefresh(frm) {\n\t\tconst lead = frm.doc.custom_lead;\n\t\tif (!lead) {\n\t\t\treturn;\n\t\t}\n\t\tfrm.add_custom_button(__('Open Patient 360'), function () {\n\t\t\tfrappe.route_options = frappe.route_options || {};\n\t\t\tfrappe.route_options.lead_name = lead;\n\t\t\tfrappe.set_route('patient-360');\n\t\t}, __('Lead'));\n\t\tfrm.add_custom_button(__('Open Lead'), function () {\n\t\t\tfrappe.set_route('Form', 'Lead', lead);\n\t\t}, __('Lead'));\n\t},\n});",
+  "view": "Form"
+ }
+]

@@ -1,0 +1,14 @@
+{
+  "resource": {
+    "resourceType": "Encounter",
+    "id": "example-encounter-01",
+    "status": "finished",
+    "class": { "code": "AMB", "display": "ambulatory" },
+    "subject": { "reference": "Patient/example-patient-01" },
+    "reasonCode": [
+      {
+        "text": "Routine diabetes review"
+      }
+    ]
+  }
+}

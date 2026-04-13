@@ -1,0 +1,18 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Number Card",
+  "name": "CI Total Leads",
+  "owner": "Administrator",
+  "label": "CI Total Leads",
+  "type": "Document Type",
+  "document_type": "Lead",
+  "function": "Count",
+  "is_public": 1,
+  "filters_json": "[]",
+  "dynamic_filters_json": "[[\"Lead\",\"company\",\"=\",\"frappe.defaults.get_user_default(\\\"Company\\\")\"]]",
+  "module": "Call Intelligence",
+  "is_standard": 1,
+  "show_percentage_stats": 0
+ }
+]

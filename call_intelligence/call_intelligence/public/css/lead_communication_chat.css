@@ -1,0 +1,169 @@
+/**
+ * Lead form — WhatsApp-style Communication chat (lcc-wa-*)
+ * Loaded via hooks.py app_include_css
+ */
+
+/* --- Panel & header (chat app bar) --- */
+.lcc-wa-panel {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	border: 1px solid var(--border-color, #e2e8f0);
+	border-radius: 12px;
+	overflow: hidden;
+	background: #f0f2f5;
+	margin-top: 12px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.lcc-wa-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 14px;
+	background: #075e54;
+	color: #fff;
+	min-height: 56px;
+}
+
+.lcc-wa-header-main {
+	min-width: 0;
+	flex: 1;
+}
+
+.lcc-wa-header-name {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.25;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.lcc-wa-header-phone {
+	font-size: 13px;
+	opacity: 0.9;
+	margin-top: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.lcc-wa-header .lcc-wa-refresh {
+	flex-shrink: 0;
+	background: rgba(255, 255, 255, 0.15) !important;
+	border: none !important;
+	color: #fff !important;
+}
+
+.lcc-wa-header .lcc-wa-refresh:hover {
+	background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* --- Toolbar --- */
+.lcc-wa-toolbar {
+	padding: 8px 12px;
+	background: #f0f2f5;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.lcc-wa-toolbar .lcc-wa-load-older {
+	font-size: 12px;
+}
+
+/* --- Scrollable thread --- */
+.lcc-wa-stream {
+	height: 440px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 12px 14px 16px;
+	background: #e5ddd5;
+	background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, transparent 32%);
+	scroll-behavior: smooth;
+}
+
+.lcc-wa-stream--dialog {
+	height: 480px;
+}
+
+/* --- Rows (no avatars) --- */
+.lcc-wa-row {
+	display: flex;
+	width: 100%;
+	margin-bottom: 6px;
+}
+
+.lcc-wa-row--in {
+	justify-content: flex-start;
+}
+
+.lcc-wa-row--out {
+	justify-content: flex-end;
+}
+
+/* --- Bubbles --- */
+.lcc-wa-bubble {
+	max-width: 60%;
+	min-width: 72px;
+	padding: 8px 10px 6px;
+	border-radius: 14px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+	word-wrap: break-word;
+}
+
+.lcc-wa-row--in .lcc-wa-bubble {
+	background: #fff;
+	border: 1px solid #e8e8e8;
+	border-top-left-radius: 4px;
+}
+
+.lcc-wa-row--out .lcc-wa-bubble {
+	background: #d9fdd3;
+	border: 1px solid #c5e8c8;
+	border-top-right-radius: 4px;
+}
+
+.lcc-wa-text {
+	font-size: 14px;
+	line-height: 1.45;
+	color: #111b21;
+	white-space: pre-wrap;
+}
+
+.lcc-wa-meta {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 6px;
+	margin-top: 4px;
+	padding-top: 2px;
+}
+
+.lcc-wa-time {
+	font-size: 11px;
+	line-height: 1;
+	color: #667781;
+}
+
+.lcc-wa-badges {
+	font-size: 10px;
+	color: #667781;
+	margin-bottom: 4px;
+	opacity: 0.85;
+}
+
+/* --- Empty / loading --- */
+.lcc-wa-muted,
+.lcc-muted {
+	padding: 24px;
+	text-align: center;
+	color: #54656f;
+	font-size: 14px;
+}
+
+/* Dialog: strip default Frappe padding noise */
+.modal-body .lcc-wa-panel {
+	margin: 0;
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
+}

@@ -1,0 +1,2 @@
+# Frappe provides requests; optional explicit pin for webhook calls
+requests>=2.28.0

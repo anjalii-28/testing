@@ -1,0 +1,25 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "name": "Call Intelligence",
+  "owner": "Administrator",
+  "dashboard_name": "Call Intelligence",
+  "module": "Call Intelligence",
+  "is_standard": 1,
+  "is_default": 0,
+  "charts": [
+   {
+    "doctype": "Dashboard Chart Link",
+    "chart": "CI Lead Creations",
+    "width": "Full"
+   }
+  ],
+  "cards": [
+   {
+    "doctype": "Number Card Link",
+    "card": "CI Total Leads"
+   }
+  ]
+ }
+]

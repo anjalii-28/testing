@@ -1,0 +1,2018 @@
+{
+  "resourceType": "Bundle",
+  "id": "document-opd-case-sheet-x204",
+  "meta": {
+    "lastUpdated": "2024-07-30T10:00:00Z"
+  },
+  "type": "document",
+  "timestamp": "2026-03-30T11:39:46.032071Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:{{composition_uuid}}",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "{{composition_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Composition"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34108-1",
+              "display": "Outpatient Note"
+            }
+          ],
+          "text": "Outpatient Visit Note"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "date": "2026-03-30T11:39:46.032071Z",
+        "author": [
+          {
+            "reference": "urn:uuid:{{practitioner_uuid}}"
+          }
+        ],
+        "title": "Outpatient Visit Note for Patient X204",
+        "attester": [
+          {
+            "mode": "professional",
+            "time": "2026-03-30T11:39:46.032071Z",
+            "party": {
+              "reference": "urn:uuid:{{practitioner_uuid}}"
+            }
+          }
+        ],
+        "custodian": {
+          "reference": "urn:uuid:{{organization_uuid}}"
+        },
+        "section": [
+          {
+            "title": "Patient Demographics",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "29762-2",
+                  "display": "Patient demographics"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{patient_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Encounter Details",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "46240-8",
+                  "display": "History of present illness"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{encounter_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Chief Complaints",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10154-3",
+                  "display": "Chief complaint"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{observation_fever_complaint_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_body_pains_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_headache_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_loss_appetite_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Past Medical History",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11348-0",
+                  "display": "Past medical history"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{condition_hypertension_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Family History",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10157-6",
+                  "display": "Family history"
+                }
+              ]
+            },
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Hypertension: Checked</li><li>No other significant family history.</li></ul></div>"
+            }
+          },
+          {
+            "title": "Allergies and Adverse Reactions",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48765-2",
+                  "display": "Allergies, adverse reactions, alerts"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{allergyintolerance_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Clinical Findings",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "29280-7",
+                  "display": "Physical findings"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{observation_pallor_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_hepatomegaly_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_no_rash_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_no_lymphadenopathy_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Vital Signs",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8716-3",
+                  "display": "Vital signs"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{observation_bp_systolic_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_bp_diastolic_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_pulse_rate_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_spo2_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{observation_temperature_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Investigations Ordered",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "18725-2",
+                  "display": "Diagnostic studies"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{servicerequest_cbc_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{servicerequest_ns1_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{servicerequest_malaria_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Diagnosis",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "29548-5",
+                  "display": "Diagnosis"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{condition_viral_fever_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{condition_query_dengue_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Treatment Plan",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "18776-5",
+                  "display": "Treatment plan"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{careplan_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{medicationrequest_levetiracetam_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{medicationrequest_pantoprazole_uuid}}"
+              }
+            ]
+          },
+          {
+            "title": "Follow-up Plan",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "18776-5",
+                  "display": "Treatment plan"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:{{appointment_uuid}}"
+              },
+              {
+                "reference": "urn:uuid:{{task_uuid}}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{patient_uuid}}",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "{{patient_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical record number"
+                }
+              ],
+              "text": "UHID"
+            },
+            "system": "http://example.org/fhir/sid/uhid",
+            "value": "X204"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1984-03-29"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{practitioner_uuid}}",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "{{practitioner_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Practitioner"
+          ]
+        },
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "Provider number"
+                }
+              ],
+              "text": "Registration Number"
+            },
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                  "valueCode": "unknown"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{organization_uuid}}",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "{{organization_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Organization"
+          ]
+        },
+        "name": "Unknown Facility",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          },
+          {
+            "system": "email",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{practitionerrole_uuid}}",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "{{practitionerrole_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/PractitionerRole"
+          ]
+        },
+        "practitioner": {
+          "reference": "urn:uuid:{{practitioner_uuid}}"
+        },
+        "organization": {
+          "reference": "urn:uuid:{{organization_uuid}}"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "1581000124104",
+                "display": "General practitioner"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{encounter_uuid}}",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "{{encounter_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "Ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "period": {
+          "start": "2026-03-29T00:00:00Z"
+        },
+        "reasonCode": [
+          {
+            "text": "Fever for five days, body pains, headache, and loss of appetite."
+          }
+        ],
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:{{practitioner_uuid}}"
+            },
+            "period": {
+              "start": "2026-03-29T00:00:00Z"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:{{organization_uuid}}"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{condition_hypertension_uuid}}",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "{{condition_hypertension_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "I10",
+              "display": "Essential (primary) hypertension"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003",
+              "display": "Hypertensive disorder (disorder)"
+            }
+          ],
+          "text": "Hypertension"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "recordedDate": "2026-03-29"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{condition_viral_fever_uuid}}",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "{{condition_viral_fever_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "differential"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "B34.9",
+              "display": "Viral infection, unspecified"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "84050009",
+              "display": "Viral infectious disease (disorder)"
+            }
+          ],
+          "text": "Viral fever"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "recordedDate": "2026-03-29"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{condition_query_dengue_uuid}}",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "{{condition_query_dengue_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "differential"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "A90",
+              "display": "Dengue fever [classical dengue]"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "168700000",
+              "display": "Dengue fever (disorder)"
+            }
+          ],
+          "text": "Query Dengue"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "recordedDate": "2026-03-29",
+        "note": [
+          {
+            "text": "To be confirmed with investigation reports."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_fever_complaint_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_fever_complaint_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "386661006",
+              "display": "Fever (finding)"
+            }
+          ],
+          "text": "Fever"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29",
+        "valueString": "Fever for five days"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_body_pains_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_body_pains_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "279039007",
+              "display": "Body pain (finding)"
+            }
+          ],
+          "text": "Body pains"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29",
+        "valueBoolean": true
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_headache_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_headache_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "25064002",
+              "display": "Headache (finding)"
+            }
+          ],
+          "text": "Headache"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29",
+        "valueBoolean": true
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_loss_appetite_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_loss_appetite_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "79890006",
+              "display": "Anorexia (finding)"
+            }
+          ],
+          "text": "Loss of appetite"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29",
+        "valueBoolean": true
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_pallor_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_pallor_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "248200003",
+              "display": "Pallor (finding)"
+            }
+          ],
+          "text": "Pallor noted"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29",
+        "valueBoolean": true
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_hepatomegaly_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_hepatomegaly_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "80383000",
+              "display": "Hepatomegaly (finding)"
+            }
+          ],
+          "text": "Mild hepatomegaly on palpation"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "255492001",
+              "display": "Mild (qualifier value)"
+            }
+          ],
+          "text": "Mild"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_no_rash_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_no_rash_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "404684003",
+              "display": "No rash observed (finding)"
+            }
+          ],
+          "text": "No rash"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29",
+        "valueBoolean": true
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_no_lymphadenopathy_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_no_lymphadenopathy_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "249062002",
+              "display": "No lymphadenopathy (finding)"
+            }
+          ],
+          "text": "No lymphadenopathy"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29",
+        "valueBoolean": true
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_bp_systolic_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_bp_systolic_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic Blood Pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29T00:00:00Z",
+        "valueQuantity": {
+          "value": 130,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_bp_diastolic_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_bp_diastolic_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic Blood Pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29T00:00:00Z",
+        "valueQuantity": {
+          "value": 90,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_pulse_rate_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_pulse_rate_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Pulse Rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29T00:00:00Z",
+        "valueQuantity": {
+          "value": 88,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_spo2_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_spo2_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen saturation in arterial blood"
+            }
+          ],
+          "text": "SpO2"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29T00:00:00Z",
+        "valueQuantity": {
+          "value": 97,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_temperature_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_temperature_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29T00:00:00Z",
+        "valueQuantity": {
+          "value": 101.9,
+          "unit": "F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_respiratory_rate_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_respiratory_rate_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory Rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29T00:00:00Z",
+        "valueQuantity": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_weight_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_weight_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29T00:00:00Z",
+        "valueQuantity": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{observation_height_uuid}}",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "{{observation_height_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+            }
+          ],
+          "text": "Height"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "effectiveDateTime": "2026-03-29T00:00:00Z",
+        "valueQuantity": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{allergyintolerance_uuid}}",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "{{allergyintolerance_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/AllergyIntolerance"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "716186003",
+              "display": "No known drug allergy (finding)"
+            }
+          ],
+          "text": "No known drug allergies."
+        },
+        "patient": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "recordedDate": "2026-03-29T00:00:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{servicerequest_cbc_uuid}}",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "{{servicerequest_cbc_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/ServiceRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "108252007",
+                "display": "Laboratory procedure"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "CBC panel - Blood by Automated count"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "authoredOn": "2026-03-29T00:00:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{servicerequest_ns1_uuid}}",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "{{servicerequest_ns1_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/ServiceRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "108252007",
+                "display": "Laboratory procedure"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "445200009",
+              "display": "Dengue virus NS1 antigen detection (procedure)"
+            }
+          ],
+          "text": "NS1 antigen"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "authoredOn": "2026-03-29T00:00:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{servicerequest_malaria_uuid}}",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "{{servicerequest_malaria_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/ServiceRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "108252007",
+                "display": "Laboratory procedure"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "108200009",
+              "display": "Malaria antigen detection (procedure)"
+            }
+          ],
+          "text": "Malaria antigen"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "authoredOn": "2026-03-29T00:00:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{medication_levetiracetam_uuid}}",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "{{medication_levetiracetam_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Medication"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1049302",
+              "display": "Levetiracetam 650 MG Oral Tablet"
+            }
+          ],
+          "text": "Levetiracetam"
+        },
+        "form": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "385055001",
+              "display": "Tablet dose form"
+            }
+          ],
+          "text": "Tablet"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                  "code": "372990",
+                  "display": "Levetiracetam"
+                }
+              ],
+              "text": "Levetiracetam"
+            },
+            "strength": {
+              "value": 650,
+              "unit": "mg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{medication_pantoprazole_uuid}}",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "{{medication_pantoprazole_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Medication"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "860975",
+              "display": "Pantoprazole 20 MG Oral Tablet"
+            }
+          ],
+          "text": "Pantoprazole"
+        },
+        "form": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "385055001",
+              "display": "Tablet dose form"
+            }
+          ],
+          "text": "Tablet"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                  "code": "203206",
+                  "display": "Pantoprazole"
+                }
+              ],
+              "text": "Pantoprazole"
+            },
+            "strength": {
+              "value": 20,
+              "unit": "mg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{medicationrequest_levetiracetam_uuid}}",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "{{medicationrequest_levetiracetam_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationReference": {
+          "reference": "urn:uuid:{{medication_levetiracetam_uuid}}"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "authoredOn": "2026-03-29T00:00:00Z",
+        "requester": {
+          "reference": "urn:uuid:{{practitioner_uuid}}"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                  "valueCode": "unknown"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 650,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "expectedSupplyDuration": {
+            "value": 5,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{medicationrequest_pantoprazole_uuid}}",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "{{medicationrequest_pantoprazole_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationReference": {
+          "reference": "urn:uuid:{{medication_pantoprazole_uuid}}"
+        },
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "authoredOn": "2026-03-29T00:00:00Z",
+        "requester": {
+          "reference": "urn:uuid:{{practitioner_uuid}}"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                  "valueCode": "unknown"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 20,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "expectedSupplyDuration": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{careplan_uuid}}",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "{{careplan_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/CarePlan"
+          ]
+        },
+        "status": "active",
+        "intent": "plan",
+        "subject": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "encounter": {
+          "reference": "urn:uuid:{{encounter_uuid}}"
+        },
+        "period": {
+          "start": "2026-03-29T00:00:00Z"
+        },
+        "activity": [
+          {
+            "detail": {
+              "kind": "MedicationRequest",
+              "code": {
+                "text": "Medication: Levetiracetam 650 mg three times a day for five days"
+              },
+              "status": "on-going",
+              "doNotPerform": false,
+              "scheduledString": "three times a day for five days",
+              "productReference": {
+                "reference": "urn:uuid:{{medication_levetiracetam_uuid}}"
+              }
+            }
+          },
+          {
+            "detail": {
+              "kind": "MedicationRequest",
+              "code": {
+                "text": "Medication: Pantoprazole 20 mg twice a day"
+              },
+              "status": "on-going",
+              "doNotPerform": false,
+              "scheduledString": "twice a day",
+              "productReference": {
+                "reference": "urn:uuid:{{medication_pantoprazole_uuid}}"
+              }
+            }
+          },
+          {
+            "detail": {
+              "kind": "NutritionOrder",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "225358003",
+                    "display": "Light diet (regime/therapy)"
+                  }
+                ],
+                "text": "Light diet advised"
+              },
+              "status": "on-going",
+              "doNotPerform": false
+            }
+          },
+          {
+            "detail": {
+              "kind": "Observation",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "229900008",
+                    "display": "Hydration (regime/therapy)"
+                  }
+                ],
+                "text": "Adequate hydration"
+              },
+              "status": "on-going",
+              "doNotPerform": false
+            }
+          },
+          {
+            "detail": {
+              "kind": "Observation",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "229710000",
+                    "display": "Rest (regime/therapy)"
+                  }
+                ],
+                "text": "Rest"
+              },
+              "status": "on-going",
+              "doNotPerform": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{appointment_uuid}}",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "{{appointment_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Appointment"
+          ]
+        },
+        "status": "proposed",
+        "description": "Follow-up visit after three days",
+        "start": "2026-04-01T00:00:00Z",
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "urn:uuid:{{patient_uuid}}"
+            },
+            "status": "accepted"
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "urn:uuid:{{practitioner_uuid}}"
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:{{task_uuid}}",
+      "resource": {
+        "resourceType": "Task",
+        "id": "{{task_uuid}}",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/Task"
+          ]
+        },
+        "status": "requested",
+        "intent": "order",
+        "description": "Patient to return earlier if symptoms persist or rash develops.",
+        "for": {
+          "reference": "urn:uuid:{{patient_uuid}}"
+        },
+        "owner": {
+          "reference": "urn:uuid:{{practitioner_uuid}}"
+        },
+        "authoredOn": "2026-03-29T00:00:00Z"
+      }
+    }
+  ]
+}

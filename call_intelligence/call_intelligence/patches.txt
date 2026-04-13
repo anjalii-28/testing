@@ -1,0 +1,11 @@
+[pre_model_sync]
+# (empty) — required by Frappe when using INI-style patches.txt
+
+[post_model_sync]
+call_intelligence.patches.v1_0.install_p360_ai_fields
+call_intelligence.patches.v1_0.sync_cf_outcome_unknown
+call_intelligence.patches.v1_0.sync_issue_call_fields
+call_intelligence.patches.v1_0.sync_issue_structured_fields
+call_intelligence.patches.v1_0.lead_phone_number_optional
+call_intelligence.patches.v1_0.add_whatsapp_booking_fields
+call_intelligence.patches.v1_0.add_whatsapp_flow_state_field

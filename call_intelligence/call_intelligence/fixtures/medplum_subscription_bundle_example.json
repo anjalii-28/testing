@@ -1,0 +1,25 @@
+{
+  "resourceType": "Bundle",
+  "type": "history",
+  "timestamp": "2026-04-09T00:00:00.000Z",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "SubscriptionStatus",
+        "status": "active",
+        "type": "event-notification",
+        "subscription": { "reference": "Subscription/example-sub" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "example-encounter-medplum",
+        "status": "finished",
+        "class": { "code": "AMB", "display": "ambulatory" },
+        "subject": { "reference": "Patient/example-patient-01" },
+        "reasonCode": [{ "text": "Medplum subscription test" }]
+      }
+    }
+  ]
+}

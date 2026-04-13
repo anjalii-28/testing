@@ -1,0 +1,169 @@
+[
+ {
+  "app": "call_intelligence",
+  "creation": "2026-03-27 07:34:40.085592",
+  "docstatus": 0,
+  "doctype": "Workspace Sidebar",
+  "header_icon": "phone",
+  "idx": 0,
+  "items": [
+   {
+    "child": 0,
+    "collapsible": 0,
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "MAIN",
+    "link_type": "DocType",
+    "show_arrow": 0,
+    "type": "Section Break"
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "icon": "dashboard",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Patient 360 Dashboard",
+    "link_to": "patient-360-dashboard",
+    "link_type": "Page",
+    "show_arrow": 0,
+    "type": "Link"
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "icon": "panel-top",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Patient 360",
+    "link_to": "patient-360",
+    "link_type": "Page",
+    "show_arrow": 0,
+    "type": "Link"
+   },
+   {
+    "child": 0,
+    "collapsible": 0,
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "CRM",
+    "link_type": "DocType",
+    "show_arrow": 0,
+    "type": "Section Break"
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "icon": "customer",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Leads",
+    "link_to": "Lead",
+    "link_type": "DocType",
+    "show_arrow": 0,
+    "type": "Link"
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "icon": "ticket",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Tickets",
+    "link_to": "Issue",
+    "link_type": "DocType",
+    "show_arrow": 0,
+    "type": "Link"
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "icon": "list",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Call Log",
+    "link_to": "Communication",
+    "link_type": "DocType",
+    "show_arrow": 0,
+    "type": "Link"
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "icon": "tag",
+    "indent": 1,
+    "keep_closed": 0,
+    "label": "Departments",
+    "link_type": "DocType",
+    "show_arrow": 0,
+    "type": "Section Break"
+   },
+   {
+    "child": 1,
+    "collapsible": 1,
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Cardiology",
+    "link_to": "patient-360-dashboard",
+    "link_type": "Page",
+    "route_options": "{\"department\":\"Cardiology\"}",
+    "show_arrow": 0,
+    "type": "Link"
+   },
+   {
+    "child": 1,
+    "collapsible": 1,
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Orthopedics",
+    "link_to": "patient-360-dashboard",
+    "link_type": "Page",
+    "route_options": "{\"department\":\"Orthopedics\"}",
+    "show_arrow": 0,
+    "type": "Link"
+   },
+   {
+    "child": 1,
+    "collapsible": 1,
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "General",
+    "link_to": "patient-360-dashboard",
+    "link_type": "Page",
+    "route_options": "{\"department\":\"General\"}",
+    "show_arrow": 0,
+    "type": "Link"
+   },
+   {
+    "child": 0,
+    "collapsible": 0,
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "SYSTEM",
+    "link_type": "DocType",
+    "show_arrow": 0,
+    "type": "Section Break"
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "icon": "settings",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Call Intelligence Settings",
+    "link_to": "Call Intelligence Settings",
+    "link_type": "DocType",
+    "show_arrow": 0,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-03-27 07:34:40.085592",
+  "modified_by": "Administrator",
+  "module": "Call Intelligence",
+  "name": "Call Intelligence",
+  "owner": "Administrator",
+  "standard": 1,
+  "title": "Call Intelligence",
+  "for_user": null
+ }
+]

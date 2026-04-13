@@ -1,0 +1,23 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Dashboard Chart",
+  "name": "CI Lead Creations",
+  "owner": "Administrator",
+  "chart_name": "CI Lead Creations",
+  "chart_type": "Count",
+  "document_type": "Lead",
+  "based_on": "creation",
+  "timeseries": 1,
+  "time_interval": "Weekly",
+  "timespan": "Last Quarter",
+  "type": "Bar",
+  "filters_json": "[]",
+  "dynamic_filters_json": "[[\"Lead\",\"company\",\"=\",\"frappe.defaults.get_user_default(\\\"Company\\\")\"]]",
+  "module": "Call Intelligence",
+  "is_standard": 1,
+  "is_public": 1,
+  "number_of_groups": 0,
+  "use_report_chart": 0
+ }
+]

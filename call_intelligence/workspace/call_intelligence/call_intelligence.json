@@ -1,0 +1,97 @@
+{
+ "app": "call_intelligence",
+ "charts": [],
+ "content": "[{\"id\":\"ciHdr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Call Intelligence</b></span>\",\"col\":12}}]",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "phone",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Call Intelligence",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tools",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Call Intelligence Settings",
+   "link_count": 0,
+   "link_to": "Call Intelligence Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Call Log",
+   "link_count": 0,
+   "link_to": "Call Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient 360",
+   "link_count": 0,
+   "link_to": "patient-360",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient 360 Dashboard",
+   "link_count": 0,
+   "link_to": "patient-360-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "module": "Call Intelligence",
+ "name": "Call Intelligence",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 50.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "format": "",
+   "label": "Leads",
+   "link_to": "Lead",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "format": "",
+   "label": "Tickets",
+   "link_to": "Issue",
+   "type": "DocType"
+  }
+ ],
+ "title": "Call Intelligence",
+ "type": "Workspace"
+}
